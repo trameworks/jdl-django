@@ -1,0 +1,156 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <!-- The above 3 meta tags *must* come first in the head -->
+
+  <!-- SITE TITLE -->
+  <title>Jardins da Literatura</title>
+  <meta name="description" content="Jardins da Literatura - Um evento de formação literária criativa"/>
+  <meta name="keywords" content="Literatura, Escola, Belo Jardim, Poesia, Estudantes"/>
+  <meta name="author" content="Trameworks Creative Web"/>
+
+  <!-- twitter card starts from here, if you don't need remove this section -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@yourtwitterusername"/>
+  <meta name="twitter:creator" content="@yourtwitterusername"/>
+  <meta name="twitter:url" content="http://yourdomain.com"/>
+  <meta name="twitter:title" content="Jardins da Literatura"/>
+  <!-- maximum 140 char -->
+  <meta name="twitter:description" content="Your site description, maximum 140 char "/>
+  <!-- maximum 140 char -->
+  <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-280-150.jpg"/>
+  <!-- when you post this page url in twitter , this image will be shown -->
+  <!-- twitter card ends from here -->
+
+  <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
+  <meta property="og:title" content="Jardins da Literatura"/>
+  <meta property="og:url" content="http://jardinsdaliteratura.com"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:site_name" content="Jardins da Literatura"/>
+  <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="http://jardinsdaliteratura.com{% static 'images/bg_home.jpg' %}"/>
+  <!-- when you post this page url in facebook , this image will be shown -->
+  <!-- facebook open graph ends from here -->
+
+  <!--  FAVICON AND TOUCH ICONS -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}"/>
+  <!-- this icon shows in browser toolbar -->
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}"/>
+  <!-- this icon shows in browser toolbar -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png' %}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-icon-120x120.png' %}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-icon-144x144.png' %}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-icon-152x152.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-icon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/favicon/android-icon-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'img/favicon/manifest.json' %}">
+  <!-- CSS -->
+  {% block styles %}
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" media="all"/>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="{% static 'libs/fontawesome/css/font-awesome.min.css' %}" media="all"/>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="{% static 'libs/maginificpopup/magnific-popup.css' %}" media="all"/>
+
+  <!-- Time Circle -->
+  <link rel="stylesheet" href="{% static 'libs/timer/TimeCircles.css' %}" media="all"/>
+
+  <!-- OWL CAROUSEL CSS -->
+  <link rel="stylesheet" href="{% static 'libs/owlcarousel/owl.carousel.min.css' %}" media="all" />
+  <link rel="stylesheet" href="{% static 'libs/owlcarousel/owl.theme.default.min.css' %}" media="all" />
+
+  <!-- GOOGLE FONT -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900"/>
+
+  <!-- MASTER  STYLESHEET  -->
+  <link id="lgx-master-style" rel="stylesheet" href="{% static 'css/style-default.css' %}" media="all"/>
+  {% endblock styles %}
+  {% block extrastyles %}{% endblock %}
+  <!-- CSS end -->
+  {% block modernizr %}
+  <!-- MODERNIZER CSS  -->
+  <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+  {% endblock modernizr %}
+</head>
+
+<body class="home">
+
+  <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="lgx-container ">
+    <!-- ***  ADD YOUR SITE CONTENT HERE *** -->
+    {% block content %}{% endblock content %}
+  </div>
+  <!--//.LGX SITE CONTAINER-->
+  <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
+  {% block scripts %}
+  <!-- JQUERY  -->
+  <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+  <!-- BOOTSTRAP JS  -->
+  <script src="{% static 'libs/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <!-- Smooth Scroll  -->
+  <script src="{% static 'libs/jquery.smooth-scroll.js' %}"></script>
+
+  <!-- SKILLS SCRIPT  -->
+  <script src="{% static 'libs/jquery.validate.js' %}"></script>
+
+  <!-- if load google maps then load this api, change api key as it may expire for limit cross as this is provided with any theme -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQvRGGtL6OrpP5xVMxq_0NgiMiRhm3ycI"></script>
+
+  <!-- CUSTOM GOOGLE MAP -->
+  <script type="text/javascript" src="{% static 'libs/gmap/jquery.googlemap.js' %}"></script>
+
+  <!-- adding magnific popup js library -->
+  <script type="text/javascript" src="{% static 'libs/maginificpopup/jquery.magnific-popup.min.js' %}"></script>
+
+  <!-- Owl Carousel  -->
+  <script src="{% static 'libs/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- COUNTDOWN   -->
+  <script src="{% static 'libs/countdown.js' %}"></script>
+  <script src="{% static 'libs/timer/TimeCircles.js' %}"></script>
+
+  <!-- Counter JS -->
+  <script src="{% static 'libs/waypoints.min.js' %}"></script>
+  <script src="{% static 'libs/counterup/jquery.counterup.min.js' %}"></script>
+
+  <!-- SMOTH SCROLL -->
+  <script src="{% static 'libs/jquery.smooth-scroll.min.js' %}"></script>
+  <script src="{% static 'libs/jquery.easing.min.js' %}"></script>
+
+  <!-- type js -->
+  <script src="{% static 'libs/typed/typed.min.js' %}"></script>
+
+  <!-- header parallax js -->
+  <script src="{% static 'libs/header-parallax.js' %}"></script>
+
+  <!-- instafeed js -->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>-->
+  <script src="{% static 'libs/instafeed.min.js' %}"></script>
+
+  <!-- CUSTOM SCRIPT  -->
+  <script src="{% static 'js/custom.script.js' %}"></script>
+  {% endblock scripts %}
+  {% block extrascripts %}{% endblock extrascripts %}
+</body>
+</html>

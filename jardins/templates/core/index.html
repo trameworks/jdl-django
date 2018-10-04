@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+  <!--HEADER-->
+  {% include 'core/partials/header.html' %}
+  <!--HEADER END-->
+  <!--BANNER-->
+  {% include 'core/partials/banner.html' %}
+  <!--BANNER END-->
+  <!--ABOUT-->
+  {% include 'core/sections/about.html' %}
+  <!--ABOUT END-->
+  <!--SPEAKERS-->
+  {% include 'core/sections/speakers.html' %}
+  <!--SPEAKERS END-->
+  <!--SCHEDULE-->
+  {% include 'core/sections/schedule.html' %}
+  <!--SCHEDULE END-->
+  <!--SPONSORED-->
+  {% include 'core/sections/sponsors.html' %}
+  <!--SPONSORED END-->
+  <!--FOOTER-->
+  {% include 'core/partials/footer.html' %}
+  <!--FOOTER END-->
+{% endblock content %}

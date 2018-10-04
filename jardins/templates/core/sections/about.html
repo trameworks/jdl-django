@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% if about_section %}
+<section>
+    <div id="lgx-about" class="lgx-about">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7">
+                        <div class="lgx-about-content-area">
+                            <div class="lgx-heading">
+                                <h2 class="heading">{{ about_section.title }}</h2>
+                                <h3 class="subheading">{{ about_section.subtitle }}</h3>
+                            </div>
+                            <div class="lgx-about-content">
+                                <p class="text">
+                                    {{ about_section.resume|safe }}
+                                </p>
+                                <div class="section-btn-area">
+                                    <a class="lgx-btn" href="about.html"><span>Saiba mais</span></a>
+                                    <a class="lgx-btn lgx-btn-yellow lgx-scroll" href="#lgx-registration"><span>Participe!</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-5">
+                        <div class="lgx-about-img-sp">
+                            <img src="{{ about_section.image.url }}" alt="about">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
+{% endif %}

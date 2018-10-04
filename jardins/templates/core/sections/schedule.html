@@ -1,0 +1,89 @@
+{% load staticfiles %}
+{% if events %}
+<section>
+    <div id="lgx-schedule" class="lgx-schedule">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                  {% if schedule_section %}
+                    <div class="col-xs-12">
+                        <div class="lgx-heading lgx-heading-white">
+                            <h2 class="heading">{{ schedule_section.title }}</h2>
+                            <h3 class="subheading">{{ schedule_section.subtitle }}</h3>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="lgx-tab lgx-tab2"> <!--lgx-tab2 lgx-tab-vertical-->
+                            <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">  <!--lgx-nav-nogap lgx-nav-colorful-->
+                              {% for tag in tags %}
+                                <li class="{% if forloop.first %}active {% endif %}"><a data-toggle="pill" href="#{{ tag.anchor }}"><h3>{{ tag.tag_name }}</h3> <p><span> {{ tag.agenda }}</span></p></a></li>
+                              {% endfor %}
+                            </ul>
+
+                            <div class="tab-content lgx-tab-content">
+                              {% for tag in tags %}
+                                <div id="{{ tag.anchor }}" class="tab-pane fade {% if forloop.first %}in active {% endif %}">
+                                    <div class="panel-group" id="accordion_{{ tag.anchor }}" role="tablist" aria-multiselectable="true">
+                                      {% for event in events %}
+                                      {% for tag_event in event.tags.all %}
+                                      {% if tag_event.id == tag.id %}
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="{{event.label}}">
+                                                <div class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion_{% for tag in event.tags.all %}{{ tag.anchor }}{% endfor %}" href="#{{event.collapse}}" aria-expanded="true" aria-controls="{{event.collapse}}">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author {% if event.speakers.all.count > 1 %}author-multi {% endif %}">
+                                                              {% for speaker in event.speakers.all %}
+                                                                <img src="{{ speaker.image.url }}" alt="Speaker"/>
+                                                              {% endfor %}
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">{{event.time}}</h4>
+                                                                <h3 class="title">{{event.title}}</h3>
+                                                                <h4 class="author-info">por <span>
+                                                                  {% for speaker in event.speakers.all %}
+                                                                    {{ speaker.title }}
+                                                                    {% if event.speakers.all.count > 1 %}</span> / <span>{% endif %}
+                                                                  {% endfor %}</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="{{event.collapse}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{event.label}}">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                      {{event.resume|safe}}
+                                                    </p>
+                                                    <h4 class="location"><strong>Local:</strong>  {{event.local}} </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                      {% endfor %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--//.ROW-->
+                <div class="section-btn-area schedule-btn-area">
+                    <a class="lgx-btn lgx-btn-big" href="#"><span>Programação em PDF</span></a>
+                    <a class="lgx-btn lgx-btn-yellow lgx-btn-big" href="#"><span>Inscreva-se!</span></a>
+                </div>
+            </div>
+            <!-- //.CONTAINER -->
+        </div>
+        <!-- //.INNER -->
+    </div>
+</section>
+{% endif %}
