@@ -8365,7 +8365,7 @@ lgx-zoomInUp
   background-size: cover;
 }
 .lgx-speakers2 .lgx-inner {
-  background: rgba(40, 61, 54, 0.7);
+  background: rgba(174, 255, 237, 0.7);
 }
 .lgx-speakers3 {
   background: url('http://placehold.it/1920x1000') bottom left no-repeat fixed;
@@ -8862,7 +8862,7 @@ lgx-zoomInUp
 /* 2.7  Schedule SECTION
 ---------------------------------------------------------------------*/
 .lgx-schedule {
-  background: #e6b54a;
+  background: rgba(230, 181, 74, 0.9);
 }
 .lgx-schedule .lgx-inner {
   background: url('../img/bg_patterns.png') bottom center no-repeat;
@@ -9413,7 +9413,7 @@ lgx-zoomInUp
   margin: 0 .5%;
   padding: 1.6rem;
   border-radius: 16px;
-  width: 23%;
+  width: 100%;
   display: inline-block;
   margin-bottom: .6rem;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -11721,7 +11721,7 @@ blockquote.lgx-testi-single:before {
   text-align: center;
 }
 .lgx-footer .lgx-inner-footer {
-  background: rgba(230, 181, 74, 0.95);
+  background: rgba(161, 171, 148, 0.82);
 }
 .lgx-footer-music {
   background: url('http://placehold.it/1920x850') bottom center no-repeat;
