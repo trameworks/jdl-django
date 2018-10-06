@@ -77,7 +77,7 @@ class RegisterWorkshop(forms.Form):
             'message': message
         })
         try:
-            email = EmailMessage(subject, html_message, email, ["trameworks@gmail.com"])
+            email = EmailMessage(subject, html_message, email, ["jardinsdaliteratura@gmail.com"])
             email.content_subtype = "html"
             email.send()
         except BadHeaderError:
