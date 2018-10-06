@@ -1,10 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import edit, base
 from django.views.generic.detail import DetailView
+from django.http import JsonResponse
 import itertools
 import operator
 
+from .forms import RegisterWorkshop
+
 from .models import AboutSection, SpeakerSection, ScheduleSection, Event, EventTag
+
+
 
 class HomeView(base.TemplateView):
     template_name = 'core/index.html'
@@ -46,6 +51,22 @@ class HomeView(base.TemplateView):
         , 'schedule_section': schedule_section
         , 'events': events
         , 'tags': tags
+        , 'register_workshop': RegisterWorkshop()
         })
 
         return context
+
+def register_workshop(request):
+    if request.POST and request.is_ajax():
+        form = RegisterWorkshop(request.POST)
+        data = {}
+        print(form.errors)
+        if form.is_valid():
+            form.send_email()
+            data['success'] = 'success'
+            return JsonResponse(data)
+        else:
+            data['error'] = 'error'
+            return JsonResponse(data)
+    else:
+        return HttpResponseRedirect("/")

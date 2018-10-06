@@ -496,12 +496,12 @@ button:after,
 .lgx-btn:after {
   content: "";
   position: absolute;
-  left: 20px;
+  left: 50px;
   top: 14px;
   height: 200px;
   width: 200px;
   background: url(../img/dots3.png) 0 0 repeat;
-  background: #1b273d;
+  background: #ff0000;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
@@ -588,7 +588,7 @@ button:hover:after,
 @media (max-width: 767px) {
   /************** 767 GLOBAl USE***********/
   .lgx-btn {
-    font-size: 12px;
+    font-size: 1.5em;
     padding: .6rem 2rem;
     letter-spacing: 0rem;
   }
@@ -6579,7 +6579,8 @@ button:hover:after,
   /************** 767 GLOBAl USE***********/
   .lgx-header .lgx-navbar .lgx-nav li a,
   .lgx-header .menu-onscroll .lgx-navbar .lgx-nav li a {
-    padding: 10px 7px;
+    padding: 18px 7px;
+    font-size: 2em;
   }
   .lgx-header-position {
     background: #1b273d;
@@ -7276,14 +7277,14 @@ button:hover:after,
   .lgx-banner-info .subtitle {
     font-size: 30px;
     line-height: 45px;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 4.5rem;
     line-height: 4rem;
   }
   .lgx-banner-info .title {
     font-size: 42px;
     line-height: 63px;
-    font-size: 4.2rem;
+    font-size: 6.2rem;
     line-height: 6.300000000000001rem;
     line-height: 5rem;
     margin-bottom: 2rem;
@@ -7292,10 +7293,13 @@ button:hover:after,
     margin-bottom: 2rem;
   }
   .lgx-banner .lgx-inner {
-    padding: 8rem 0;
+    padding: 12rem 0;
   }
   .slider-text-single figure img {
     height: 280px;
+  }
+  .lgx-banner-info .subtitle .typed {
+    disp
   }
   /************** 480 GLOBAl USE***********/
 }
@@ -9162,7 +9166,7 @@ lgx-zoomInUp
 }
 .lgx-panel .panel-body {
   padding: 0 2rem 2rem;
-  margin-left: 120px;
+  margin-left: 12px;
   display: block;
 }
 .lgx-panel .lgx-single-schedule {
@@ -11372,7 +11376,7 @@ blockquote.lgx-testi-single:before {
   background: rgba(255, 255, 255, 0);
 }
 .lgx-modal {
-  background: rgba(27, 39, 61, 0.8);
+  background: rgba(161, 171, 148, 0.8);
 }
 .lgx-modal .modal-dialog {
   background: transparent;
@@ -11405,9 +11409,9 @@ blockquote.lgx-testi-single:before {
   opacity: 1;
 }
 .lgx-modal .modal-dialog .modal-content .modal-body {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  background: #1b273d;
+  background: #aeffed;
 }
 .lgx-modal .modal-dialog .modal-content .modal-body iframe {
   width: 100%;
@@ -12359,7 +12363,7 @@ blockquote.lgx-testi-single:before {
     height: 350px;
   }
   .lgx-cart-area .lgx-btn {
-    padding: 1.2rem 2rem;
+    padding: 2.2rem 3rem;
   }
   .lgx-about-img {
     margin-right: 0;
@@ -12492,10 +12496,14 @@ blockquote.lgx-testi-single:before {
     font-size: 4.2rem;
     line-height: 5rem;
   }
+  .lgx-banner-info-circle .info-circle-inner .date .lgx-counter {
+    color: #fff;
+  }
   .lgx-banner-info-circle .info-circle-inner .date span {
     font-size: inherit;
     line-height: inherit;
     display: inline-block;
+    color: #fff;
   }
   .lgx-banner-info-area {
     display: block;
@@ -12570,7 +12578,7 @@ blockquote.lgx-testi-single:before {
     margin-bottom: 0;
   }
   .sponsors-area .single {
-    width: 48%;
+    width: 100%;
   }
   .lgx-gallery-area .lgx-gallery-single {
     width: 50%;
@@ -12753,3 +12761,12 @@ blockquote.lgx-testi-single:before {
 /********************************************************************/
 /*  LGX STYLE END ***************************************************
 *********************************************************************/
+
+/* TRAMEWORKS HACKNG */
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}

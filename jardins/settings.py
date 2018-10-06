@@ -137,6 +137,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Email configuration
+
+DEFAULT_FROM_EMAIL = "Jardins da Literatura <jardinsdaliteratura@gmail.com>"
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = env('JARDINS_SENDGRID')
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = env('JARDINS_EMAIL_HOST')
+EMAIL_HOST_PASSWORD = env('JARDINS_EMAIL_HOST_PWD')
+EMAIL_USE_TLS = True
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 

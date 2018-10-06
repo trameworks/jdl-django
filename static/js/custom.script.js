@@ -167,7 +167,9 @@
 
             $( 'html, body' ).stop().animate({
                 scrollTop: topTo
-            }, 1500, 'easeInOutExpo');
+            }, 1500, 'easeInOutExpo', function() {
+              $('.navbar-toggle').click();
+            });
             event.preventDefault();
             return false;
         } );
@@ -374,7 +376,7 @@
                 // show cursor
                 showCursor: true,
                 // character for cursor
-                cursorChar: "|",
+                cursorChar: "",
                 // either html or text
                 contentType: 'html'
             });
