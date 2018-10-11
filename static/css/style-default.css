@@ -9184,7 +9184,7 @@ lgx-zoomInUp
   border: 2px solid #efa506;
 }
 .lgx-panel .lgx-single-schedule .author-multi img {
-  width: 48%;
+  width: 100%;
   margin-right: 1%;
   float: left;
 }

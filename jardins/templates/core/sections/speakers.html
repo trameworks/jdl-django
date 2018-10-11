@@ -23,8 +23,12 @@
                                 <a class="profile-img" href="speakers.html"><img class="img-responsive" src="{{speaker.image.url}}" alt="{{speaker.title}}"/></a>
                                 <figcaption>
                                     <div class="social-group">
+                                    {% if speaker.facebook.strip %}
                                         <a class="sp-fb" href="{{speaker.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    {% endif %}
+                                    {% if speaker.instagram.strip %}
                                         <a class="sp-insta" href="{{speaker.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    {% endif %}
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title"><a href="speaker.html">{{speaker.title}}</a></h3>

@@ -10,9 +10,9 @@ from .forms import RegisterWorkshop
 from .models import AboutSection, SpeakerSection, ScheduleSection, Event, EventTag
 
 
-
 class HomeView(base.TemplateView):
     template_name = 'core/index.html'
+
 
     def get_context_data(self, *args, **kwargs):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
@@ -30,7 +30,8 @@ class HomeView(base.TemplateView):
 
         try:
             speaker_section = SpeakerSection.objects.get(active=True)
-            speakers = speaker_section.speaker_set.all()
+            speakers_id_list = [1]
+            speakers = speaker_section.speaker_set.all().exclude(id__in=[40])
         except SpeakerSection.DoesNotExist:
             speaker_section = None
             speakers = None
