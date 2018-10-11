@@ -39,7 +39,7 @@ class HomeView(base.TemplateView):
         try:
             schedule_section = ScheduleSection.objects.get(active=True)
             tags = EventTag.objects.all()
-            events = Event.objects.all()
+            events = Event.objects.all().order_by('created_at')
         except ScheduleSection.DoesNotExist:
             schedule_section = None
             events = None
