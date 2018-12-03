@@ -12770,3 +12770,18 @@ blockquote.lgx-testi-single:before {
 .mt-20 {
   margin-top: 20px;
 }
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.networks {
+  font-family: 'SilentEcho', sans-serif;
+  font-size: 36px;
+  line-height: 39px;
+  font-size: 3.6rem;
+  line-height: 3.9000000000000004rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0 0 .3rem;
+}
