@@ -33,7 +33,7 @@ class RegisterWorkshop(forms.Form):
     # (esc_mg, 'Escola Professora Maria Galvão'),
     # (esc_jvc, 'Centro de Excelência Municipal Professor José Vieira da Costa'),
     # (esc_mbf, 'Escola Ministro Marcos de Barros Freire'),
-    (esc_vjm, 'Escola Municipal Vereador Joaquim Medeiros'),
+    (esc_vjm, 'EREM Bento Américo'),
     (ete_emm, 'ETE - Edson Mororó Moura'),
     # (esc_pgt, 'Escola Padre Giovanni Toniutti'),
     # (esc_lll, 'Escola Municipal Luíza Leopoldina Lopes'),
