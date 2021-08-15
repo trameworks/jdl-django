@@ -636,6 +636,12 @@
          ===  Start Contact Form Validation And Ajax Submission END
          ========================================================================== */
 
+         // CKEDITOR - https://stackoverflow.com/questions/55388442/how-to-get-ckeditor-field-value-in-modelform-after-submit-in-django2-1
+        for (var i in CKEDITOR.instances) {
+            CKEDITOR.instances[i].on('change', function() {
+                    CKEDITOR.instances[i].updateElement() });
+        }
+
     });//DOM READY
 
 

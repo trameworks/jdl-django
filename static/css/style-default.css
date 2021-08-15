@@ -67,7 +67,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #f1f1f1;
+  background: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -6391,7 +6391,7 @@ button:hover:after,
   background: #1b273d;
 }
 .lgx-header .menu-onscroll {
-  background: rgba(161, 69, 63, 0.95);
+  background: #336eaa;
   position: fixed;
   top: 0;
   width: 100%;
@@ -6706,7 +6706,7 @@ button:hover:after,
 /* 2.2 BANNER SECTION
 ---------------------------------------------------------------------*/
 .lgx-banner {
-  background: url('../img/bg-caatinga.jpg') top center no-repeat;
+  background: url('../img/bg-2021.jpg') top center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -11716,7 +11716,7 @@ blockquote.lgx-testi-single:before {
 /* 2.20 FOOTER
 ---------------------------------------------------------------------*/
 .lgx-footer {
-  /* background: url('http://placehold.it/1920x850') bottom center no-repeat; */
+  background: url('../img/bg-2021-footer.png') bottom center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -11725,7 +11725,7 @@ blockquote.lgx-testi-single:before {
   text-align: center;
 }
 .lgx-footer .lgx-inner-footer {
-  background: rgba(161, 171, 148, 0.82);
+  background: transparent;
 }
 .lgx-footer-music {
   background: url('http://placehold.it/1920x850') bottom center no-repeat;
@@ -11814,7 +11814,7 @@ blockquote.lgx-testi-single:before {
 }
 .lgx-footer-single .text {
   margin-bottom: 1rem;
-  color: #a94442;
+  color: #f7b63e;
 }
 .lgx-footer-single .lgx-btn {
   padding: 1.3rem 5rem;
@@ -11847,7 +11847,7 @@ blockquote.lgx-testi-single:before {
   color: inherit;
 }
 .lgx-footer-single .date {
-  color: #a94442;
+  color: #f7b63e;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -11947,7 +11947,7 @@ blockquote.lgx-testi-single:before {
 }
 .lgx-footer-bottom p span,
 .lgx-footer-bottom p a {
-  color: #a94442;
+  color: #f7b63e;
 }
 /********************************************************************/
 /* 3. SINGLE PAGE STYLE

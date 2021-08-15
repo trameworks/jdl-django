@@ -16,6 +16,7 @@
                             <!-- Form -->
                             <form id="register-workshop" action="{% url 'core:register_workshop' %}" method="POST" data-csrf-token={{csrf_token}}>
                               {% csrf_token %}
+                              {{ register_workshop.media }}
                               {{register_workshop.non_field_errors}}
 
                               <div class="row">
@@ -64,20 +65,15 @@
                                       {{register_workshop.school.errors}}
                                     </div>
 
-                                    <div class="col-md-12 mb-20">
-                                      <span> Qual oficina deseja fazer? </span>
-                                      {{register_workshop.workshop}}
-                                      {{register_workshop.workshop.errors}}
-                                    </div>
-
                                   </div>
                                 </div>
 
                                 <div class="col-md-12 mb-20">
+                                  <span> Escreva sua poesia</span>
                                   {{register_workshop.message}}
                                   {{register_workshop.message.errors}}
                                   <div class="section-btn-area text-right text-center-xxs mt-20">
-                                    <input type="submit" value="Registrar" class="lgx-btn lgx-btn-yellow" data-loading-text="Loading...">
+                                    <button id="submit" onclick="SubmitButton()" type="submit" class="lgx-btn lgx-btn-yellow" data-loading-text="Loading..."> Enviar </button>
                                   </div>
 
                                 </div>
@@ -86,7 +82,7 @@
 
                             </form>
                             <div class="alert alert-success hidden animated fadeIn" id="contactSuccess" >
-                              <strong>Sucesso!</strong> Sua inscrição foi realizada!
+                              <strong>Sucesso!</strong> Sua inscrição foi realizada com sucesso! Aguarde a divulgação dos resultados.
                             </div>
 
                             <div class="alert alert-danger hidden animated shake" id="contactError">
