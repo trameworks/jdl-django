@@ -11,16 +11,16 @@
   <title>Jardins da Literatura</title>
   <meta name="description" content="Jardins da Literatura - Um evento de formação literária criativa"/>
   <meta name="keywords" content="Literatura, Escola, Belo Jardim, Poesia, Estudantes"/>
-  <meta name="author" content="Trameworks Creative Web"/>
+  <meta name="author" content="Trameworks Digital Experience"/>
 
   <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
   <meta property="og:title" content="Jardins da Literatura"/>
-  <meta property="og:url" content="http://jardinsdaliteratura.com"/>
+  <meta property="og:url" content="https://www.jardinsdaliteratura.com"/>
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:site_name" content="Jardins da Literatura"/>
   <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
   <meta property="og:type" content="website"/>
-  <meta property="og:image" content="http://jardinsdaliteratura.com{% static 'images/bg_home.jpg' %}"/>
+  <meta property="og:image" content="https://www.jardinsdaliteratura.com{% static 'images/bg_home.jpg' %}"/>
   <!-- when you post this page url in facebook , this image will be shown -->
   <!-- facebook open graph ends from here -->
 
@@ -66,6 +66,9 @@
 
   <!-- MASTER  STYLESHEET  -->
   <link id="lgx-master-style" rel="stylesheet" href="{% static 'css/style-default.css' %}" media="all"/>
+  <!-- LGPD -->
+  <link rel="stylesheet" href="{% static 'css/cookie-dialog.css' %}" media="all"/>
+
   {% endblock styles %}
   {% block extrastyles %}{% endblock %}
   <!-- CSS end -->
@@ -152,6 +155,10 @@
   <!-- REGISTER WORKSHOP SCRIPT  -->
   <script src="{% static 'libs/registerform/register-form-validation.js' %}"></script>
   <script src="{% static 'libs/registerform/jquery.validate.min.js' %}"></script>
+
+  <!-- LGPD -->
+  <script src="{% static 'js/jquery.ihavecookies.min.js' %}"></script>
+  <script src="{% static 'js/lgpd-cookie.js' %}"></script>
 
   {% endblock scripts %}
   {% block extrascripts %}{% endblock extrascripts %}
